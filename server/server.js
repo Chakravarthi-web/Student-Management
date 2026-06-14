@@ -17,6 +17,9 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/courses', require('./routes/courseRoutes'));
 app.use('/api/jobs', require('./routes/jobRoutes'));
 app.use('/api/assignments', require('./routes/assignmentRoutes'));
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
 
 // Connect to Database
 const PORT = process.env.PORT || 5000;
